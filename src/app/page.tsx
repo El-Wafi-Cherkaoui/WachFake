@@ -17,9 +17,10 @@ export default async function Home() {
     </div>
   }
   return (
-    <div>
+    <div className="p-2 flex flex-col gap-2">
       You aren't signed in <br/>
-      <SignInBtn/>
+      <SignInBtn type="google"/>
+      <SignInBtn type="github"/>
     </div>
   );
 }
