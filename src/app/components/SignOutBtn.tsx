@@ -1,12 +1,12 @@
 "use client"
 import { logout } from "@/lib/actions/auth";
+import SignoutSvg from "./svgs/SignoutSvg";
 
 export default function SignOutBtn() {
     return(
-        <button 
-        className="bg-red-500" 
+        <button className="logoutBtn"
         onClick={logout}>
-            sign out
+            <SignoutSvg width={30}/>
         </button>
     )
 }
