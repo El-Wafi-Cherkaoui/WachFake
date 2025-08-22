@@ -1,6 +1,6 @@
 "use client"
-import GuestSvg from "@/app/components/svgs/GuestSvg";
-import SearchSvg from "@/app/components/svgs/SearchSvg";
+import GuestSvg from "@/components/svgs/GuestSvg";
+import SearchSvg from "@/components/svgs/SearchSvg";
 import Link from "next/link";
 
 export default function HeroBtns() {

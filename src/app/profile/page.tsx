@@ -1,6 +1,6 @@
 "use server"
 import Image from "next/image"
-import SignOutBtn from "../components/SignOutBtn"
+import SignOutBtn from "../../components/SignOutBtn"
 import { auth } from "@/auth"
 
 export default async function Profile() {

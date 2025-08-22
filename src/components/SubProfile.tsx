@@ -1,4 +1,4 @@
-import SignOutBtn from "@/app/components/SignOutBtn"
+import SignOutBtn from "@/components/SignOutBtn"
 import { auth } from "@/auth"
 import Image from "next/image"
 import Link from "next/link"

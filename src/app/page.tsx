@@ -7,7 +7,7 @@ export default async function Home() {
   return (
     <HeroLayout>
       <div>
-        <Image width={200} height={400} alt="" src={heroPageImg1}/>
+        <Image priority width={200} height={400} alt="" src={heroPageImg1}/>
       </div>
       <HeroIntroText/>
     </HeroLayout>
