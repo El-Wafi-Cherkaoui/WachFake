@@ -16,7 +16,6 @@ export default async function SubProfile(){
                         height={30} alt="profile image" />
                     </span>
                     <Link href={"/profile"} className="hover:underline"> 
-
                         {session.user.name}
                     </Link>
                 </h6>

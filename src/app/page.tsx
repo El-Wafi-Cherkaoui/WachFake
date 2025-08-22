@@ -1,29 +1,15 @@
-import { auth } from "@/auth";
-import SignInBtn from "./components/SignInBtn";
+import HeroLayout from "@/components/heroPage/HeroLayout";
 import Image from "next/image";
-import SignOutBtn from "./components/SignOutBtn";
-import SubProfile from "@/components/SubProfile";
+import heroPageImg1 from "@public/images/heroPageImg1.png"
+import HeroIntroText from "@/components/heroPage/HeroIntroText";
 
 export default async function Home() {
-  // const session = await auth()
-  // if(session?.user){
-  //   return <div>
-  //     Welcome {session.user.name}
-  //     {
-  //       session.user.image &&
-  //       <Image src={session.user.image ?? ""} width={80} height={80} alt="" className="rounded-full"/>
-  //     }
-  //     <SignOutBtn/>
-  //   </div>
-  // }
-  // return (
-  //   <div className="p-2 flex flex-col gap-2">
-  //     You aren't signed in <br/>
-  //     <SignInBtn type="google"/>
-  //     <SignInBtn type="github"/>
-  //   </div>
-  // );
   return (
-      <></>
+    <HeroLayout>
+      <div>
+        <Image width={200} height={400} alt="" src={heroPageImg1}/>
+      </div>
+      <HeroIntroText/>
+    </HeroLayout>
   )
 }

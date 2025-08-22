@@ -1,18 +1,23 @@
-import { auth } from "@/auth";
+"use client"
+import { useSession } from "next-auth/react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
-export default async function NavBar() {
-    const session = await auth()
-    if (session?.user) {
+export default function NavBar() {
+    const session = useSession()
+    const pathname = usePathname()
+    console.log(pathname);
+    
+    if (session.data?.user) {
         return(
             <div className="navBar">
-                <Link href={"/videos"}>
-                    <span>فيديو</span>
+                <Link href={"/videos"} className={`${pathname?.startsWith("/videos") ? "active" : ""}`}>
+                    <span >فيديو</span>
                 </Link>
-                <Link href={"/images"}>
+                <Link href={"/images"} className={`${pathname?.startsWith("/images") ? "active" : ""}`}>
                     <span>صور</span>
                 </Link>
-                <Link href={"/profile"}>
+                <Link href={"/profile"} className={`${pathname?.startsWith("/profile") ? "active" : ""}`}>
                     <span>ملفي</span>
                 </Link>
             </div>
@@ -20,14 +25,14 @@ export default async function NavBar() {
     } else{
         return(
             <div className="navBar">
-                <Link href={"/"}>
+                <Link href={"/"} className={`${pathname === "/" ? "active" : " "}`}>
                     <span>الرئيسية</span>
                 </Link>
-                <Link href={"/ourGoals"}>
+                <Link href={"/ourGoals"} className={`${pathname?.startsWith("/goals") ? "active" : ""}`}>
                     <span>هدفنا</span>
                 </Link>
-                <Link href={"/about"}>
-                    <span>من نحن</span>
+                <Link href={"/about"} className={`${pathname?.startsWith("/about") ? "active" : ""}`}>
+                    <span>من نحن</span> 
                 </Link>
             </div>
         )

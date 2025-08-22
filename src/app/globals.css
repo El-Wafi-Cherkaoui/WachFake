@@ -28,23 +28,26 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  @apply flex items-center justify-center h-[100vh] w-[100vw] flex-col ; 
+  @apply flex items-center justify-center h-[100vh] w-[100vw] flex-col p-5  ; 
 }
 header{
-  @apply w-[95vw] h-[8vh] py-1 px-10  rounded-t-2xl flex items-center bg-secondaryColor; 
+  @apply w-[95vw] h-[10vh] py-4 px-10  rounded-t-2xl flex items-center bg-secondaryColor overflow-hidden ; 
 }
 
 .logo h1{
-  @apply flex items-center gap-1  font-bold text-primaryColor
+  @apply flex items-center gap-1  font-bold text-primaryColor text-4xl p-4
 }
 .logo span{
-  @apply p-1 px-2  rounded bg-primaryColor text-secondaryColor;
+  @apply p-1 px-2  rounded bg-primaryColor text-secondaryColor font-serif;
 }
 .navBar{
   @apply flex  gap-10 mx-auto text-textColor items-center justify-center flex-row-reverse
 }
 .navBar > * {
   @apply hover:border-textColor border-1 border-transparent py-2 px-4  rounded-xl flex 
+}
+.navBar .active {
+  @apply border-textColor border-1 px-2
 }
 .mainBodyCont{
   @apply h-[90vh] w-[95vw] overflow-hidden rounded-b-2xl bg-secondaryColor;
@@ -68,6 +71,55 @@ header{
   @apply border-1 border-transparent hover:border-primaryColor rounded-l-sm text-secondaryColor bg-primaryColor hover:text-primaryColor hover:bg-secondaryColor cursor-pointer ;
 }
 .signupBtn {
-  @apply p-1 rounded bg-primaryColor text-pretty hover:text-primaryColor hover:bg-secondaryColor  text-secondaryColor
+  @apply px-4 py-1 rounded bg-primaryColor text-pretty hover:text-primaryColor hover:bg-secondaryColor  text-secondaryColor
   cursor-pointer border-1 border-transparent hover:border-primaryColor 
 } 
+
+.heroLayout{
+  @apply text-primaryColor flex items-center justify-center gap-[10vw] h-full py-10 my-auto w-[80vw] mx-auto text-right ;
+}
+.heroLayout h1{
+  @apply font-bold text-4xl 
+}
+.heroLayout p {
+  @apply text-textColor 
+}
+.heroLayout .btns {
+  @apply flex gap-2 my-4 flex-row-reverse items-center
+}
+.heroLayout .btns:first-child {
+  @apply ml-auto
+}
+.heroLayout .btns button{
+  @apply py-2 px-4 font-serif border rounded-4xl cursor-pointer font-bold flex items-center gap-3  overflow-hidden 
+}
+.heroLayout .btns svg{
+  @apply -translate-y-[0vh]  
+}
+.heroLayout .btns .primaryBtn{
+  @apply bg-primaryColor h-full text-secondaryColor hover:bg-secondaryColor hover:text-primaryColor
+}
+.heroLayout .btns .secondaryBtn{
+  @apply bg-secondaryColor text-textColor hover:bg-textColor hover:text-secondaryColor 
+}
+.statsHeader{
+  @apply flex flex-row-reverse justify-between
+}
+.heroLayout .stats{
+  @apply my-auto 
+}
+.heroLayout .stats p{
+  @apply flex flex-row-reverse ml-auto w-fit items-end gap-2
+}
+.heroLayout .stats span{
+  @apply text-primaryColor text-4xl font-serif font-bold
+}
+.statsDots{
+  @apply flex items-center
+}
+.statsDots > *{
+  @apply bg-primaryColor p-[.25vw] rounded-full m-[.1vw] 
+}
+.statsDots >*.active{
+  @apply bg-secondaryColor border-1 border-primaryColor p-[.25vw] rounded-4xl m-[.1vw] 
+}

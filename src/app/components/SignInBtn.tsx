@@ -1,4 +1,3 @@
-"use client"
 import { login } from "@/lib/actions/auth";
 
 export default function SignInBtn({type}: {type: string}) {
