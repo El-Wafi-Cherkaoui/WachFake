@@ -59,7 +59,7 @@ header{
   @apply flex gap-2  items-center
 }
 .subProfile h6 span{
-  @apply bg-primaryColor rounded-r-2xl overflow-hidden
+  @apply bg-primaryColor rounded-r-2xl overflow-hidden p-1 
 }
 .subProfile h6 img{
   @apply rounded-xl border-2 border-[#ED4450] h-full
@@ -91,16 +91,17 @@ header{
   @apply ml-auto
 }
 .heroLayout .btns button{
-  @apply py-2 px-4 font-serif border rounded-4xl cursor-pointer font-bold flex items-center gap-3  overflow-hidden 
+  @apply py-2 px-4 font-serif border rounded-4xl cursor-pointer 
+  font-bold flex items-center gap-3 hover:shadow-lg shadow-black/50 duration-300 
 }
 .heroLayout .btns svg{
   @apply -translate-y-[0vh]  
 }
 .heroLayout .btns .primaryBtn{
-  @apply bg-primaryColor h-full text-secondaryColor hover:bg-secondaryColor hover:text-primaryColor
+  @apply  bg-primaryColor h-full text-secondaryColor hover:bg-secondaryColor hover:text-primaryColor
 }
 .heroLayout .btns .secondaryBtn{
-  @apply bg-secondaryColor text-textColor hover:bg-textColor hover:text-secondaryColor 
+  @apply bg-secondaryColor text-textColor hover:bg-textColor hover:text-secondaryColor border-textColor 
 }
 .statsHeader{
   @apply flex flex-row-reverse justify-between
@@ -118,8 +119,19 @@ header{
   @apply flex items-center
 }
 .statsDots > *{
-  @apply bg-primaryColor p-[.25vw] rounded-full m-[.1vw] 
+  @apply bg-primaryColor p-[.2vw] px-[.4vw] rounded-full m-[.1vw]  border-1
 }
 .statsDots >*.active{
-  @apply bg-secondaryColor border-1 border-primaryColor p-[.25vw] rounded-4xl m-[.1vw] 
+  box-sizing: border-box; 
+  @apply bg-secondaryColor border-1  border-primaryColor 
+}
+
+.notFound {
+  @apply flex flex-col text-center text-textColor w-fit mx-auto gap-10  h-full items-center justify-center 
+}
+.notFound h1{
+  @apply text-4xl p-2 rounded
+}
+.notFound span{
+  @apply bg-primaryColor text-secondaryColor p-2 rounded mr-1 
 }
