@@ -3,12 +3,12 @@ import Footer from "./HeroFooter";
 import HeroStats from "./HeroStats";
 import HeroBtns from "./subComponents/HeroBtns";
 
-export default function HeroIntroText() {
+export default function HeroIntroContent() {
     return(
         <div className="flex flex-col h-full">
             <div className="py-4">
                 <h1>
-                واش تقدر تفرق بين الحقيقي والمزور
+                واش تقدر تفرق بين الحقيقي والمزيف
                 </h1>
                 <p className="mt-4">
                     درب عينيك وتعلم كيفاش تعرف الفيديوهات والصور اللي مصنوعة بالذكاء الاصطناعي.
@@ -17,7 +17,6 @@ export default function HeroIntroText() {
             </div>
             <HeroBtns/>
             <HeroStats/>
-            <Footer/>
         </div>
     )
 }

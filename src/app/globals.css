@@ -28,20 +28,25 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  @apply flex items-center justify-center h-[100vh] w-[100vw] flex-col p-5  ; 
+  @apply flex items-center justify-center h-[100vh] w-[100vw] flex-col p-5 pb-0 ; 
 }
 header{
-  @apply w-[95vw] h-[10vh] py-4 px-10  rounded-t-2xl flex items-center bg-secondaryColor overflow-hidden ; 
+  @apply w-[95vw] h-[10vh] py-4 px-10  rounded-t-2xl flex items-center bg-secondaryColor overflow-hidden  ; 
 }
-
-.logo h1{
-  @apply flex items-center gap-1  font-bold text-primaryColor text-4xl p-4
+.logo{
+  @apply border-b-2 border-primaryColor rounded-md border-r-2 pr-1 
+}
+.logo h1, .primaryTitle{
+  @apply flex items-center gap-1  font-bold text-primaryColor text-2xl md:text-4xl 
+}
+.primaryTitle{
+  direction: rtl;
 }
 .logo span{
-  @apply p-1 px-2  rounded bg-primaryColor text-secondaryColor font-serif;
+  @apply p-1 px-2  rounded bg-primaryColor text-secondaryColor font-serif rounded-br-none;
 }
 .navBar{
-  @apply flex  gap-10 mx-auto text-textColor items-center justify-center flex-row-reverse
+  @apply flex  gap-10 mx-auto text-textColor items-center justify-center flex-row-reverse font-extrabold 
 }
 .navBar > * {
   @apply hover:border-textColor border-1 border-transparent py-2 px-4  rounded-xl flex 
@@ -50,7 +55,7 @@ header{
   @apply border-textColor border-1
 }
 .mainBodyCont{
-  @apply h-[90vh] w-[95vw] overflow-hidden rounded-b-2xl bg-secondaryColor shadow-xl/50 ;
+  @apply h-[90vh] w-[95vw] rounded-b-2xl bg-secondaryColor shadow-xl/50 overflow-hidden ;
 }
 .subProfile {
   @apply flex p-2 w-fit rounded-md font-serif ; 
@@ -143,4 +148,32 @@ header{
 }
 .notFound .patternImg2{
   @apply -left-10 -bottom-50 -rotate-z-230
+}
+/* about page */
+.aboutLayout{
+  @apply overflow-scroll md:grid grid-cols-3 py-8 w-[80vw] mx-auto text-right md:p-4 block overflow-y-scroll md:overflow-hidden h-[90%] md:h-fit   
+}
+.aboutLayout img{
+  @apply mx-auto
+}
+.aboutLayout > *{
+  @apply md:p-4 
+}
+.sideTextAbout{
+  @apply col-span-2 text-black
+}
+.sideTextAbout ul{
+  @apply md:p-4 px-5 md:px-10 
+}
+.sideTextAbout li{
+  list-style: square ;
+  direction: rtl ;
+
+}
+.sideTextAbout li::marker{
+  font-size: 1em;
+  @apply text-primaryColor border border-black 
+}
+.bottomTextAbout {
+  @apply col-span-3 text-black py-1
 }

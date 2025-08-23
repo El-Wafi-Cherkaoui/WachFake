@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Tajawal } from 'next/font/google';
 import Header from "@/components/Header";
+import Footer from "@/components/heroPage/HeroFooter";
 const tajawal = Tajawal({
   subsets: ['arabic', 'latin'],
   weight: ['200','300','400','500','700','800','900'],
@@ -30,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ar">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased ${tajawal.className}`}
       >
@@ -38,6 +39,7 @@ export default function RootLayout({
         <div className="mainBodyCont">
           {children}
         </div>
+        <Footer/>
       </body>
     </html>
   );
