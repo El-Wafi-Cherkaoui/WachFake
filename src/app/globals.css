@@ -85,7 +85,7 @@ header{
   @apply text-textColor 
 }
 .heroLayout .btns {
-  @apply flex gap-2 my-4 flex-row-reverse items-center
+  @apply flex gap-2 my-0 flex-row-reverse items-center
 }
 .heroLayout .btns:first-child {
   @apply ml-auto
@@ -107,7 +107,7 @@ header{
   @apply flex flex-row-reverse justify-between
 }
 .heroLayout .stats{
-  @apply my-auto 
+  @apply py-8
 }
 .heroLayout .stats p{
   @apply flex flex-row-reverse ml-auto w-fit items-end gap-2
