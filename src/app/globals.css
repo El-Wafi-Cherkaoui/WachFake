@@ -150,17 +150,23 @@ header{
   @apply -left-10 -bottom-50 -rotate-z-230
 }
 /* about page */
-.goalsLayout{
+.goalsLayout, .aboutLayout{
   @apply overflow-scroll md:grid grid-cols-3 py-8 w-[80vw] mx-auto text-right md:p-4 block overflow-y-scroll md:overflow-hidden h-[90%] md:h-fit   
 }
-.goalsLayout img{
+.aboutLayout{
+  @apply items-center mt-5
+}
+.goalsLayout img, .aboutLayout img{
   @apply mx-auto
 }
-.goalsLayout > *{
+.goalsLayout > *, .aboutLayout > *{
   @apply md:p-4 
 }
-.sideTextGoals{
+.sideTextGoals, .sideTextAbout{
   @apply col-span-2 text-black
+}
+.sideTextGoals span{
+  @apply block text-center font-bold  p-1 
 }
 .sideTextGoals ul{
   @apply md:p-4 px-5 md:px-10 

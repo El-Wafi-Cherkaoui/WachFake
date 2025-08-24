@@ -1,7 +1,7 @@
 import Image from "next/image";
 import aboutImg from "@public/images/goals.png"
-import GoalsContent from "@/components/aboutPage/GoalsContent";
-import GoalsLayout from "@/components/aboutPage/GoalsLayout";
+import GoalsContent from "@/components/goalsPage/GoalsContent";
+import GoalsLayout from "@/components/goalsPage/GoalsLayout";
 
 export  default function Goals() {
     return(
