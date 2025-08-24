@@ -30,20 +30,36 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   @apply flex items-center justify-center h-[100vh] w-[100vw] flex-col p-5 pb-0 ; 
 }
-header{
-  @apply w-[95vw] h-[10vh] py-4 px-10  rounded-t-2xl flex items-center bg-secondaryColor overflow-hidden  ; 
+header{ 
+  @apply h-[10vh] w-[95vw] items-center 
 }
-.logo{
+.lgHeader{
+  @apply py-4 w-[95vw] px-10  rounded-t-2xl hidden md:flex bg-secondaryColor overflow-hidden  ; 
+}
+.mobileHeader{
+  @apply w-[95%] md:hidden flex justify-between flex-row ml-auto h-fit text-secondaryColor mr-4
+}
+/* logo */
+.lgLogo{
   @apply border-b-2 border-primaryColor rounded-md border-r-2 pr-1 
 }
-.logo h1, .primaryTitle{
-  @apply flex items-center gap-1  font-bold text-primaryColor text-2xl md:text-4xl 
+.lgLogo h1, .primaryTitle, .mobileLogo h1{
+  @apply flex items-center gap-1 font-bold text-primaryColor text-2xl md:text-4xl 
+}
+.mobileLogo h1{
+  @apply text-secondaryColor ml-auto
+}
+.logo span{
+  @apply p-1 px-2 rounded font-serif
+}
+.lgLogo span{
+  @apply   bg-primaryColor text-secondaryColor rounded-br-none;
+}
+.mobileLogo span{
+  @apply bg-secondaryColor !text-primaryColor
 }
 .primaryTitle{
   direction: rtl;
-}
-.logo span{
-  @apply p-1 px-2  rounded bg-primaryColor text-secondaryColor font-serif rounded-br-none;
 }
 .navBar{
   @apply flex  gap-10 mx-auto text-textColor items-center justify-center flex-row-reverse font-extrabold 
@@ -54,8 +70,26 @@ header{
 .navBar .active {
   @apply border-textColor border-1
 }
+.navBarMobile{
+  @apply bg-red-500
+}
+.test{
+  @apply absolute w-[100vw] h-[100vh] bg-primaryColor left-0 top-0 z-200 flex items-center justify-center 
+}
+.compactMenuContent{
+  @apply flex flex-col justify-center items-center text-4xl gap-4 
+}
+.compactMenuContent > *{
+  @apply w-full text-center p-2 cursor-pointer hover:bg-primaryColor hover:text-shadow-secondaryColor duration-200 
+}
+.compactMenuContent .active{
+  @apply border bg-secondaryColor rounded text-primaryColor shadow
+}
+.subProfileMobile{
+  @apply flex flex-col
+}
 .mainBodyCont{
-  @apply h-[90vh] w-[95vw] rounded-b-2xl bg-secondaryColor shadow-xl/50 overflow-hidden ;
+  @apply h-[90vh] w-[95vw] rounded-b-2xl md:rounded-t-none rounded-t-2xl  bg-secondaryColor shadow-xl/50 overflow-hidden ;
 }
 .subProfile {
   @apply flex p-2 w-fit rounded-md font-serif ; 
@@ -81,13 +115,16 @@ header{
 } 
 
 .heroLayout{
-  @apply text-primaryColor flex items-center justify-center gap-[10vw] h-full py-10 my-auto w-[80vw] mx-auto text-right ;
+  @apply overflow-scroll text-primaryColor md:flex items-center justify-center gap-[10vw] h-full py-10 my-auto w-[80vw] mx-auto text-right ;
 }
 .heroLayout h1{
   @apply font-bold text-4xl 
 }
 .heroLayout p {
   @apply text-textColor 
+}
+.heroLayout img{
+  @apply md:w-[100%] w-[150px] mx-auto
 }
 .heroLayout .btns {
   @apply flex gap-2 my-0 flex-row-reverse items-center
@@ -141,7 +178,7 @@ header{
   @apply bg-primaryColor text-secondaryColor p-2 rounded mr-1 
 }
 .pattern{
-  @apply absolute opacity-60  
+  @apply absolute opacity-60  hidden md:block
 }
 .notFound .patternImg{
   @apply -right-0 bottom-40 -rotate-z-45
@@ -181,5 +218,5 @@ header{
   @apply text-primaryColor border border-black 
 }
 .bottomTextGoals {
-  @apply col-span-3 text-black py-1
+  @apply col-span-3 text-black py-1;
 }

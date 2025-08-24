@@ -1,17 +1,17 @@
 "use server"
 
 import SubProfile from "./SubProfile";
-import Logo from "@/components/header/Logo";
+import Logo from "@/components/header/lgScreen/Logo";
 import { SessionProvider } from "next-auth/react";
-import NavBar from "./header/NavBar";
-import NavBarGuest from "./header/NavBarGuest";
+import NavBar from "./NavBar";
+import NavBarGuest from "./NavBarGuest";
 import { auth } from "@/auth";
 
 
-export default async function Header() {
+export default async function LgHeader() {
   const session = await auth()
   return(
-      <header>
+      <header className="lgHeader">
         <SubProfile/>
         <SessionProvider>
         {

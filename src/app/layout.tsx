@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Tajawal } from 'next/font/google';
-import Header from "@/components/Header";
 import Footer from "@/components/heroPage/HeroFooter";
+import LgHeader from "@/components/header/lgScreen/LgHeader";
+import MobileHeader from "@/components/header/mobileScreen/MobileHeader";
 const tajawal = Tajawal({
   subsets: ['arabic', 'latin'],
   weight: ['200','300','400','500','700','800','900'],
@@ -35,7 +36,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased ${tajawal.className}`}
       >
-        <Header/>
+        <LgHeader/>
+        <MobileHeader/>
         <div className="mainBodyCont">
           {children}
         </div>

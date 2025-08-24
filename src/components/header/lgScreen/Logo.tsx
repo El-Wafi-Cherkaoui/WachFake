@@ -1,7 +1,7 @@
 "use client"
 export default function Logo() {
     return(
-        <div className="logo">
+        <div className="lgLogo logo">
             <h1>
                 <span>
                     Fake
